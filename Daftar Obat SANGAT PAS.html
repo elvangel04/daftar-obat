@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)file:///C:/Users/MyBook%2011G/Downloads/ibu%20ninit/New%20folder/saya.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Obat</title>
+    <link rel="stylesheet" href="./Daftar Obat SANGAT PAS_files/style.css">
+</head>
+<body>
+    <h1>Daftar Obat</h1>
+    <form id="addDrugForm">
+        <input type="text" id="name" placeholder="Nama Obat" required="">
+        <input type="text" id="activeIngredient" placeholder="Zat Aktif" required="">
+        <input type="text" id="form" placeholder="Bentuk Sediaan" required="">
+        <input type="number" id="initialStock" placeholder="Jumlah Stok Awal" required="">
+        <input type="number" id="currentStock" placeholder="Jumlah Stok Saat Ini" required="">
+        <input type="number" id="price" placeholder="Harga" required="">
+        <button type="submit">Tambah Obat</button>
+    </form>
+    
+    <input type="text" id="searchByName" placeholder="Cari berdasarkan Nama Obat">
+    <input type="text" id="searchByIngredient" placeholder="Cari berdasarkan Zat Aktif">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nama Obat</th>
+                <th>Zat Aktif</th>
+                <th>Bentuk Sediaan</th>
+                <th>Jumlah Stok Awal</th>
+                <th>Jumlah Stok Saat Ini</th>
+                <th>Harga</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="drugTableBody"><tr>
+            <td>paracetamol</td>
+            <td>paracetamol</td>
+            <td>tablet</td>
+            <td><input type="number" value="111" onchange="updateInitialStock(0, this.value)"></td>
+            <td>96</td>
+            <td>4000</td>
+            <td>
+                <button onclick="reduceStock(0)">Kurangi Stok</button>
+                <button onclick="editDrug(0)">Edit</button>
+                <button onclick="deleteDrug(0)">Hapus</button>
+            </td>
+        </tr><tr>
+            <td>ctm</td>
+            <td>ctm</td>
+            <td>tablet</td>
+            <td><input type="number" value="100" onchange="updateInitialStock(1, this.value)"></td>
+            <td>100</td>
+            <td>4000</td>
+            <td>
+                <button onclick="reduceStock(1)">Kurangi Stok</button>
+                <button onclick="editDrug(1)">Edit</button>
+                <button onclick="deleteDrug(1)">Hapus</button>
+            </td>
+        </tr></tbody>
+    </table>
+
+    <h2>Total Penghasilan: <span id="totalRevenue">16000</span></h2>
+    <button id="resetRevenue">Reset Penghasilan</button>
+
+    <script src="./Daftar Obat SANGAT PAS_files/web.js.download"></script>
+
+
+</body></html>
